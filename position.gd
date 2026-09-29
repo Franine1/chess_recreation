@@ -6,6 +6,7 @@ extends Resource
 
 
 var board_position: BitMap
+var next_to_move: bool
 
 enum piece {
 	EMPTY,
@@ -176,6 +177,7 @@ func reset_board() -> void:
 	set_piece_at_a([Vector2i(3,0),Vector2i(3,7)],get_queen(true))
 	set_piece_at_a([Vector2i(4,0),Vector2i(4,7)],get_king(true))
 	set_color_at_r(Rect2i(0,0,8,2),false)
+	next_to_move = true
 
 
 
